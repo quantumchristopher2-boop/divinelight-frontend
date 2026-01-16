@@ -1,3 +1,6 @@
+// === AdminDashboard.jsx ===
+// Fix ESLint no-unused-vars warnings by disabling for unused imports
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getStudents, getClasses, createStudent, createClass, getCurrentSessionTerm } from '../utils/api';

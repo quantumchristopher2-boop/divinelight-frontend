@@ -1,3 +1,5 @@
+// === LandingPage.jsx ===
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './LandingPage.css';
@@ -5,10 +7,11 @@ import './LandingPage.css';
 function LandingPage() {
   const navigate = useNavigate();
 
-  const SCHOOL_NAME = process.env.REACT_APP_SCHOOL_NAME;
-  const SCHOOL_EMAIL = process.env.REACT_APP_SCHOOL_EMAIL;
-  const SCHOOL_PHONE = process.env.REACT_APP_SCHOOL_PHONE_WHATSAPP;
-  const SCHOOL_ADDRESS = process.env.REACT_APP_SCHOOL_ADDRESS;
+  // Add safe fallback if env vars are missing
+  const SCHOOL_NAME = process.env.REACT_APP_SCHOOL_NAME || 'Divine Light Schools';
+  const SCHOOL_EMAIL = process.env.REACT_APP_SCHOOL_EMAIL || 'info@divinelight.edu';
+  const SCHOOL_PHONE = process.env.REACT_APP_SCHOOL_PHONE_WHATSAPP || '+234000000000';
+  const SCHOOL_ADDRESS = process.env.REACT_APP_SCHOOL_ADDRESS || '123 School St, City';
 
   return (
     <div className="landing">
